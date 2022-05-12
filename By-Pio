@@ -1,7 +1,7 @@
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local label = Instance.new("TextLabel")
-local AutoTrans = Instance.new("TextButton")
+local Label = Instance.new("TextLabel")
 local withdraw = Instance.new("TextButton")
 local deposit = Instance.new("TextButton")
 
@@ -12,66 +12,40 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 main.Name = "main"
 main.Parent = ScreenGui
-main.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
-main.Position = UDim2.new(0.351466924, 0, 0.372006059, 0)
-main.Size = UDim2.new(0, 190, 0, 126)
-main.Active = true
+main.BackgroundColor3 = Color3.fromRGB(111, 111, 111)
+main.Position = UDim2.new(0.406411529, 0, 0.353380591, 0)
+main.Size = UDim2.new(0, 214, 0, 138)
+mian.Active = true 
 main.Draggable = true
 
 label.Name = "label"
-label.Parent = main
+label.Parent = ScreenGui
 label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-label.Size = UDim2.new(0, 190, 0, 20)
+label.Position = UDim2.new(0.406411529, 0, 0.354709417, 0)
+label.Size = UDim2.new(0, 214, 0, 36)
 label.Font = Enum.Font.SourceSans
-label.Text = "AutoTransferV1 /  By:Pio"
+label.Text = "AutoTansferV1 By: Pio"
 label.TextColor3 = Color3.fromRGB(255, 255, 255)
 label.TextSize = 14.000
 
-AutoTrans.Name = "AutoTrans"
-AutoTrans.Parent = main
-AutoTrans.BackgroundColor3 = Color3.fromRGB(0, 60, 225)
-AutoTrans.Position = UDim2.new(0, 0, 0.150793791, 0)
-AutoTrans.Size = UDim2.new(0, 190, 0, 32)
-AutoTrans.Font = Enum.Font.SourceSans
-AutoTrans.Text = " AutoTransferV1"
-AutoTrans.TextColor3 = Color3.fromRGB(255, 255, 255)
-AutoTrans.TextSize = 14.000
-AutoTrans.MouseButton1Down:connect(function()
-	while true do
-		local args = {
-			[1] = {
-				[1] = "479a44d3-b42a-4e82-84a8-e7ee5adbdb90",
-				[2] = {},
-				[3] = 25000000000
-			}
-		}
-
-		workspace.__THINGS.__REMOTES:FindFirstChild("bank withdraw"):InvokeServer(unpack(args))
-		wait(3)
-
-		local args = {
-			[1] = {
-				[1] = "a5686225-1936-47f1-92d7-6473ac191ddb",
-				[2] = {},
-				[3] = 25000000000
-			}
-		}
-
-		workspace.__THINGS.__REMOTES:FindFirstChild("bank deposit"):InvokeServer(unpack(args))
-		wait(4.2)
-
-	end
-end)
+Label.Name = "Label"
+Label.Parent = ScreenGui
+Label.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+Label.Position = UDim2.new(0.406411529, 0, 0.426853716, 0)
+Label.Size = UDim2.new(0, 213, 0, 28)
+Label.Font = Enum.Font.SourceSans
+Label.Text = "Wait 3 Seconds before Tapping"
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextSize = 14.000
 
 withdraw.Name = "withdraw"
-withdraw.Parent = main
+withdraw.Parent = ScreenGui
 withdraw.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-withdraw.BorderColor3 = Color3.fromRGB(0, 0, 0)
-withdraw.Position = UDim2.new(0.0473684222, 0, 0.452381074, 0)
-withdraw.Size = UDim2.new(0, 83, 0, 63)
+withdraw.Position = UDim2.new(0.417940885, 0, 0.501002014, 0)
+withdraw.Size = UDim2.new(0, 87, 0, 57)
 withdraw.Font = Enum.Font.SourceSans
-withdraw.Text = " Withdraw "
-withdraw.TextColor3 = Color3.fromRGB(255, 255, 255)
+withdraw.Text = "Withdraw"
+withdraw.TextColor3 = Color3.fromRGB(85, 255, 255)
 withdraw.TextSize = 14.000
 withdraw.MouseButton1Down:connect(function()
 	local args = {
@@ -86,14 +60,13 @@ withdraw.MouseButton1Down:connect(function()
 end)
 
 deposit.Name = "deposit"
-deposit.Parent = main
+deposit.Parent = ScreenGui
 deposit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-deposit.BorderColor3 = Color3.fromRGB(0, 0, 0)
-deposit.Position = UDim2.new(0.515789449, 0, 0.452381074, 0)
-deposit.Size = UDim2.new(0, 83, 0, 63)
+deposit.Position = UDim2.new(0.527013242, 0, 0.501002014, 0)
+deposit.Size = UDim2.new(0, 87, 0, 57)
 deposit.Font = Enum.Font.SourceSans
 deposit.Text = "Deposit"
-deposit.TextColor3 = Color3.fromRGB(255, 255, 255)
+deposit.TextColor3 = Color3.fromRGB(85, 255, 255)
 deposit.TextSize = 14.000
 deposit.MouseButton1Down:connect(function()
 	local args = {
