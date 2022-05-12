@@ -16,8 +16,8 @@ main.Parent = ScreenGui
 main.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
 main.Position = UDim2.new(0.237104878, 0, 0.29643622, 0)
 main.Size = UDim2.new(0, 219, 0, 175)
-main.Active
-main.Draggable
+main.Active = true 
+main.Draggable = true
 
 label.Name = "label"
 label.Parent = main
