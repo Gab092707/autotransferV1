@@ -40,7 +40,7 @@ AutoTrans.MouseButton1Down:connect(function()
 	while true do
 		local args = {
 			[1] = {
-				[1] = "9db6d62a-32eb-4429-9e39-9193dd189b30",
+				[1] = "479a44d3-b42a-4e82-84a8-e7ee5adbdb90",
 				[2] = {},
 				[3] = 25000000000
 			}
@@ -51,7 +51,7 @@ AutoTrans.MouseButton1Down:connect(function()
 
 		local args = {
 			[1] = {
-				[1] = "479a44d3-b42a-4e82-84a8-e7ee5adbdb90",
+				[1] = "a5686225-1936-47f1-92d7-6473ac191ddb",
 				[2] = {},
 				[3] = 25000000000
 			}
