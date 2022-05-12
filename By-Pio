@@ -1,6 +1,7 @@
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local label = Instance.new("TextLabel")
+local autotrans = Instance.new("TextButton")
 local Label = Instance.new("TextLabel")
 local withdraw = Instance.new("TextButton")
 local deposit = Instance.new("TextButton")
@@ -12,40 +13,76 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 main.Name = "main"
 main.Parent = ScreenGui
-main.BackgroundColor3 = Color3.fromRGB(111, 111, 111)
-main.Position = UDim2.new(0.406411529, 0, 0.353380591, 0)
-main.Size = UDim2.new(0, 214, 0, 138)
-mian.Active = true 
-main.Draggable = true
+main.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+main.Position = UDim2.new(0.237104878, 0, 0.29643622, 0)
+main.Size = UDim2.new(0, 219, 0, 175)
+main.Active
+main.Draggable
 
 label.Name = "label"
-label.Parent = ScreenGui
+label.Parent = main
 label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-label.Position = UDim2.new(0.406411529, 0, 0.354709417, 0)
-label.Size = UDim2.new(0, 214, 0, 36)
-label.Font = Enum.Font.SourceSans
-label.Text = "AutoTansferV1 By: Pio"
+label.Position = UDim2.new(-0.000338062295, 0, -0.000920235761, 0)
+label.Size = UDim2.new(0, 219, 0, 38)
+label.Font = Enum.Font.SciFi
+label.Text = "AutoGemTransferV1 | By Pio"
 label.TextColor3 = Color3.fromRGB(255, 255, 255)
 label.TextSize = 14.000
 
+autotrans.Name = "autotrans"
+autotrans.Parent = main
+autotrans.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+autotrans.Position = UDim2.new(0.00456620986, 0, 0.211428583, 0)
+autotrans.Size = UDim2.new(0, 218, 0, 33)
+autotrans.Font = Enum.Font.SourceSans
+autotrans.Text = "AutoGemTransV1 | bugged, kickable"
+autotrans.TextColor3 = Color3.fromRGB(0, 0, 0)
+autotrans.TextSize = 14.000
+autotrans.MouseButton1Down:connect(function()
+	while true do
+		local args = {
+			[1] = {
+				[1] = "479a44d3-b42a-4e82-84a8-e7ee5adbdb90",
+				[2] = {},
+				[3] = 25000000000
+			}
+		}
+
+		workspace.__THINGS.__REMOTES:FindFirstChild("bank withdraw"):InvokeServer(unpack(args))
+		wait(3)
+
+		local args = {
+			[1] = {
+				[1] = "a5686225-1936-47f1-92d7-6473ac191ddb",
+				[2] = {},
+				[3] = 25000000000
+			}
+		}
+
+		workspace.__THINGS.__REMOTES:FindFirstChild("bank deposit"):InvokeServer(unpack(args))
+		wait(4.2)
+
+	end
+end)
+
 Label.Name = "Label"
-Label.Parent = ScreenGui
-Label.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
-Label.Position = UDim2.new(0.406411529, 0, 0.426853716, 0)
-Label.Size = UDim2.new(0, 213, 0, 28)
+Label.Parent = main
+Label.BackgroundColor3 = Color3.fromRGB(0, 143, 143)
+Label.Position = UDim2.new(0.00456620986, 0, 0.400000006, 0)
+Label.Size = UDim2.new(0, 217, 0, 18)
 Label.Font = Enum.Font.SourceSans
-Label.Text = "Wait 3 Seconds before Tapping"
+Label.Text = "Manual | wait 3secs Per withdraw/Deposit"
 Label.TextColor3 = Color3.fromRGB(255, 255, 255)
 Label.TextSize = 14.000
 
 withdraw.Name = "withdraw"
-withdraw.Parent = ScreenGui
-withdraw.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-withdraw.Position = UDim2.new(0.417940885, 0, 0.501002014, 0)
-withdraw.Size = UDim2.new(0, 87, 0, 57)
+withdraw.Parent = main
+withdraw.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+withdraw.Position = UDim2.new(0.0410958901, 0, 0.54285717, 0)
+withdraw.Size = UDim2.new(0, 91, 0, 74)
 withdraw.Font = Enum.Font.SourceSans
 withdraw.Text = "Withdraw"
-withdraw.TextColor3 = Color3.fromRGB(85, 255, 255)
+withdraw.TextColor3 = Color3.fromRGB(0, 0, 0)
 withdraw.TextSize = 14.000
 withdraw.MouseButton1Down:connect(function()
 	local args = {
@@ -60,14 +97,15 @@ withdraw.MouseButton1Down:connect(function()
 end)
 
 deposit.Name = "deposit"
-deposit.Parent = ScreenGui
-deposit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-deposit.Position = UDim2.new(0.527013242, 0, 0.501002014, 0)
-deposit.Size = UDim2.new(0, 87, 0, 57)
+deposit.Parent = main
+deposit.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+deposit.Position = UDim2.new(0.538812816, 0, 0.54285717, 0)
+deposit.Size = UDim2.new(0, 91, 0, 74)
 deposit.Font = Enum.Font.SourceSans
 deposit.Text = "Deposit"
-deposit.TextColor3 = Color3.fromRGB(85, 255, 255)
+deposit.TextColor3 = Color3.fromRGB(0, 0, 0)
 deposit.TextSize = 14.000
+deposit.TextWrapped = true
 deposit.MouseButton1Down:connect(function()
 	local args = {
 		[1] = {
