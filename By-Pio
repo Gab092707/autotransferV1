@@ -42,7 +42,7 @@ autotrans.MouseButton1Down:connect(function()
 	while true do
 		local args = {
 			[1] = {
-				[1] = "a5686225-1936-47f1-92d7-6473ac191ddb",
+				[1] = "withdraw id here",
 				[2] = {},
 				[3] = 25000000000
 			}
@@ -53,7 +53,7 @@ autotrans.MouseButton1Down:connect(function()
 
 		local args = {
 			[1] = {
-				[1] = "479a44d3-b42a-4e82-84a8-e7ee5adbdb90",
+				[1] = "deposit id here",
 				[2] = {},
 				[3] = 25000000000
 			}
@@ -87,7 +87,7 @@ withdraw.TextSize = 14.000
 withdraw.MouseButton1Down:connect(function()
 	local args = {
 		[1] = {
-			[1] = "a5686225-1936-47f1-92d7-6473ac191ddb",
+			[1] = "withdraw id here",
 			[2] = {},
 			[3] = 25000000000
 		}
@@ -109,7 +109,7 @@ deposit.TextWrapped = true
 deposit.MouseButton1Down:connect(function()
 	local args = {
 		[1] = {
-			[1] = "479a44d3-b42a-4e82-84a8-e7ee5adbdb90",
+			[1] = "deposit id here",
 			[2] = {},
 			[3] = 25000000000
 		}
