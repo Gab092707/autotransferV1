@@ -40,26 +40,28 @@ autotrans.TextColor3 = Color3.fromRGB(0, 0, 0)
 autotrans.TextSize = 14.000
 autotrans.MouseButton1Down:connect(function()
 	while true do
-		local args = {
-			[1] = {
-				[1] = "withdraw id here",
-				[2] = {},
-				[3] = 25000000000
-			}
-		}
-
-		workspace.__THINGS.__REMOTES:FindFirstChild("bank withdraw"):InvokeServer(unpack(args))
+	local A_1 = 
+{
+	[1] = "9db6d62a-32eb-4429-9e39-9193dd189b30", 
+	[2] = 
+{
+}, 
+	[3] = 25000000000
+}
+local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank withdraw"]
+Event:InvokeServer(A_1)
 		wait(3)
-
-		local args = {
-			[1] = {
-				[1] = "deposit id here",
-				[2] = {},
-				[3] = 25000000000
-			}
-		}
-
-		workspace.__THINGS.__REMOTES:FindFirstChild("bank deposit"):InvokeServer(unpack(args))
+		
+local A_1 = 
+{
+	[1] = "d9bf3cbc-9569-472f-87a8-dba12b1d6577", 
+	[2] = 
+{
+}, 
+	[3] = 25000000000
+}
+local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank deposit"]
+Event:InvokeServer(A_1)
 		wait(4.2)
 
 	end
@@ -85,15 +87,16 @@ withdraw.Text = "Withdraw"
 withdraw.TextColor3 = Color3.fromRGB(0, 0, 0)
 withdraw.TextSize = 14.000
 withdraw.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "withdraw id here",
-			[2] = {},
-			[3] = 25000000000
-		}
-	}
-
-	workspace.__THINGS.__REMOTES:FindFirstChild("bank withdraw"):InvokeServer(unpack(args))
+local A_1 = 
+{
+	[1] = "9db6d62a-32eb-4429-9e39-9193dd189b30", 
+	[2] = 
+{
+}, 
+	[3] = 25000000000
+}
+local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank withdraw"]
+Event:InvokeServer(A_1)
 end)
 
 deposit.Name = "deposit"
@@ -107,13 +110,14 @@ deposit.TextColor3 = Color3.fromRGB(0, 0, 0)
 deposit.TextSize = 14.000
 deposit.TextWrapped = true
 deposit.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "deposit id here",
-			[2] = {},
-			[3] = 25000000000
-		}
-	}
-
-	workspace.__THINGS.__REMOTES:FindFirstChild("bank deposit"):InvokeServer(unpack(args))
+local A_1 = 
+{
+	[1] = "d9bf3cbc-9569-472f-87a8-dba12b1d6577", 
+	[2] = 
+{
+}, 
+	[3] = 25000000000
+}
+local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank deposit"]
+Event:InvokeServer(A_1)
 end)
