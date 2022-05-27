@@ -42,7 +42,7 @@ autotrans.MouseButton1Down:connect(function()
 	while true do
 	local A_1 = 
 {
-	[1] = "9db6d62a-32eb-4429-9e39-9193dd189b30", 
+	[1] = "5369c18d-4b6f-4b49-84ab-d13cc33f004b", 
 	[2] = 
 {
 }, 
@@ -54,7 +54,7 @@ Event:InvokeServer(A_1)
 		
 local A_1 = 
 {
-	[1] = "d9bf3cbc-9569-472f-87a8-dba12b1d6577", 
+	[1] = "5369c18d-4b6f-4b49-84ab-d13cc33f004b", 
 	[2] = 
 {
 }, 
@@ -89,7 +89,7 @@ withdraw.TextSize = 14.000
 withdraw.MouseButton1Down:connect(function()
 local A_1 = 
 {
-	[1] = "9db6d62a-32eb-4429-9e39-9193dd189b30", 
+	[1] = "5369c18d-4b6f-4b49-84ab-d13cc33f004b", 
 	[2] = 
 {
 }, 
@@ -112,7 +112,7 @@ deposit.TextWrapped = true
 deposit.MouseButton1Down:connect(function()
 local A_1 = 
 {
-	[1] = "d9bf3cbc-9569-472f-87a8-dba12b1d6577", 
+	[1] = "5369c18d-4b6f-4b49-84ab-d13cc33f004b", 
 	[2] = 
 {
 }, 
